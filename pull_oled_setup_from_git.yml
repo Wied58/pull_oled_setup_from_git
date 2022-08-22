@@ -1,0 +1,35 @@
+--- 
+- 
+  hosts: all
+  become: true
+  become_method: sudo
+  become_user: root
+  tasks:
+  
+
+      - name: install packages
+        apt:
+          name: "{{ item }}"
+          state: present
+        loop:
+           - python3-pip
+           - python3-setuptools
+           - python3-dev -y
+           - libjpeg-dev -y
+           - libopenjp2-7-dev
+   
+
+
+      - name: install python packages
+        pip:
+          name: "{{ item }}"
+          executable: pip3
+        loop:
+           - Pillow
+
+
+
+      - name: Set I2C Port
+        lineinfile:
+          path: /etc/modules
+          line: 'i2c-dev0'
