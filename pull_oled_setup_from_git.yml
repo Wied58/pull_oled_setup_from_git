@@ -14,8 +14,8 @@
         loop:
            - python3-pip
            - python3-setuptools
-           - python3-dev -y
-           - libjpeg-dev -y
+           - python3-dev
+           - libjpeg-dev
            - libopenjp2-7-dev
    
 
