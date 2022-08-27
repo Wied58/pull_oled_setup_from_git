@@ -39,7 +39,7 @@
           repo: "https://github.com/adafruit/Adafruit_Python_SSD1306.git"
           update: yes
           force: yes
-          version: "main"
+          #version: "main"
 
 
 
