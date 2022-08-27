@@ -43,7 +43,7 @@
 
       - copy:
           src: "{{ item }}"
-          dest: /home/pi/Adafruit_Python_SSD1306
+          dest: /home/pi/Adafruit_Python_SSD1306/
           owner: pi
           mode: 755
         with_fileglob:
