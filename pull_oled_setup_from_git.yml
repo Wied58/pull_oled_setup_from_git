@@ -27,9 +27,23 @@
         loop:
            - Pillow
 
+      #git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
+      - name: Get recusb repo from GitHub
+        git: 
+          dest: /home/pi/git_scratch
+          repo: "https://github.com/adafruit/Adafruit_Python_SSD1306.git"
+          update: yes
+          force: yes
+          version: "main"
 
+
+
+      #cd Adafruit_Python_SSD1306
+      #sudo python3 setup.py install
+      - name: Execute the script
+        command: sh /home/pi/Adafruit_Python_SSD1306/setup.py install
 
       - name: Set I2C Port
         lineinfile:
           path: /etc/modules
-          line: 'i2c-dev0'
+          line: 'i2c-dev'
