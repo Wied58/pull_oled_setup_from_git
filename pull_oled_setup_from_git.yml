@@ -27,10 +27,15 @@
         loop:
            - Pillow
 
+      - name: Delete content & directory
+        file:
+          state: absent
+          path: /home/pi/git_scratch
+
       #git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
       - name: Get recusb repo from GitHub
         git: 
-          dest: /home/pi/
+          dest: /home/pi/git_scratch
           repo: "https://github.com/adafruit/Adafruit_Python_SSD1306.git"
           update: yes
           force: yes
