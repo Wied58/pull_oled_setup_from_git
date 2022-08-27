@@ -44,8 +44,8 @@
       - copy:
           src: "{{ item }}"
           dest: /home/pi/Adafruit_Python_SSD1306
-          owner: root
-          mode: 600
+          owner: pi
+          mode: 755
         with_fileglob:
           - /home/pi/git_scratch/*
 
