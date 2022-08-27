@@ -41,13 +41,18 @@
           force: yes
           #version: "main"
 
-      - name: Copy OLED library from git_scratch to Adafruit_Python_SSD1306
-        copy:
-          src: /home/pi/git_scratch/*.*
-          dest: /home/pi/Adafruit_Python_SSD1306/*.*
-          owner: pi
-          group: pi
-          mode: 0775
+      - name: Synchronization of src on the control machine to dest on the remote hosts
+        synchronize:
+          src: /home/pi/git_scratch
+          dest: /home/pi/Adafruit_Python_SSD1306
+
+#      - name: Copy OLED library from git_scratch to Adafruit_Python_SSD1306
+#        copy:
+#          src: /home/pi/git_scratch/*.*
+#          dest: /home/pi/Adafruit_Python_SSD1306/*.*
+#          owner: pi
+#          group: pi
+#          mode: 0775
 
       #cd Adafruit_Python_SSD1306
       #sudo python3 setup.py install
