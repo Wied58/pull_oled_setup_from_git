@@ -49,11 +49,6 @@
         with_fileglob:
           - /home/pi/git_scratch/*
 
-      - name: Synchronization of src on the control machine to dest on the remote hosts
-        synchronize:
-          src: /home/pi/git_scratch
-          dest: /home/pi/Adafruit_Python_SSD1306
-
 
       #cd Adafruit_Python_SSD1306
       #sudo python3 setup.py install
