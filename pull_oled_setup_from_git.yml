@@ -45,6 +45,7 @@
           src: "{{ item }}"
           dest: /home/pi/Adafruit_Python_SSD1306/
           owner: pi
+          group: pi
           mode: 755
         with_fileglob:
           - /home/pi/git_scratch/*
