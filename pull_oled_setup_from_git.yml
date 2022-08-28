@@ -55,6 +55,7 @@
       - name: add shebang to python oled setup.py script
         lineinfile:
           path: /home/pi/Adafruit_Python_SSD1306/setup.py
+          insertbefore: BOF
           line: '#!/usr/bin/python3'
 
 
