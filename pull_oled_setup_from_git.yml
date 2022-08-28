@@ -41,12 +41,22 @@
           force: yes
           #version: "main"
 
+      - name: Change owership and permissions
+        file:
+           path: /home/pi/Tools/git_scratch
+           state: directory
+           owner: pi 
+           group: pi
+           # when specifying mode using octal numbers, add a leading 0
+           mode: 0755
+           recurse: yes
+
       - copy:
           src: "{{ item }}"
           dest: /home/pi/Adafruit_Python_SSD1306/
           owner: pi
           group: pi
-          mode: 755
+          mode: 0755
         with_fileglob:
           - /home/pi/git_scratch/*
 
