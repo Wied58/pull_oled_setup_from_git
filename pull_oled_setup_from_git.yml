@@ -51,20 +51,17 @@
            mode: 0755
            recurse: yes
 
-#      - copy:
-#          src: "{{ item }}"
-#          dest: /home/pi/Adafruit_Python_SSD1306/
-#          owner: pi
-#          group: pi
-#          mode: 0755
-#        with_fileglob:
-#          - /home/pi/git_scratch/*
-#
-#
+
+      - name: add shebang to python oled setup.py script
+        lineinfile:
+          path: /home/pi/Adafruit_Python_SSD1306/setup.py
+          line: '#!/usr/bin/python3'
+
+
       #cd Adafruit_Python_SSD1306
       #sudo python3 setup.py install
       - name: Execute the script
-        command: /home/pi/Adafruit_Python_SSD1306/python3 setup.py install
+        command: /home/pi/Adafruit_Python_SSD1306/setup.py install
 
       - name: Set I2C Port
         lineinfile:
