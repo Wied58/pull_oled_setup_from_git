@@ -61,10 +61,10 @@
 #          - /home/pi/git_scratch/*
 #
 #
-#      #cd Adafruit_Python_SSD1306
-#      #sudo python3 setup.py install
-#      - name: Execute the script
-#        command: /home/pi/Adafruit_Python_SSD1306/setup.py install
+      #cd Adafruit_Python_SSD1306
+      #sudo python3 setup.py install
+      - name: Execute the script
+        command: /home/pi/Adafruit_Python_SSD1306/python3 setup.py install
 
       - name: Set I2C Port
         lineinfile:
