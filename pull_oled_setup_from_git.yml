@@ -43,7 +43,7 @@
 
       - name: Change owership and permissions
         file:
-           path: /home/pi/Tools/Adafruit_Python_SSD1306
+           path: /home/pi/Adafruit_Python_SSD1306
            state: directory
            owner: pi 
            group: pi
