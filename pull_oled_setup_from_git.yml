@@ -62,7 +62,7 @@
       #cd Adafruit_Python_SSD1306
       #sudo python3 setup.py install
       - name: Execute the script
-        command: /home/pi/Adafruit_Python_SSD1306/setup.py install
+        command: /home/pi/Adafruit_Python_SSD1306/setup.py install > setup_output.txt
 
       - name: Set I2C Port
         lineinfile:
