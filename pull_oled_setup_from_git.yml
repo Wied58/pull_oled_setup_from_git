@@ -61,19 +61,19 @@
 
 
       - name: Set I2C Port
-            blockinfile:
-              dest: "/etc/modules"
-              block: |
-               i2c-dev
-               i2c-bcm2708
+        blockinfile:
+          dest: "/etc/modules"
+          block: |
+           i2c-dev
+           i2c-bcm2708
 
 
       - name: Set I2C Port part 2
-            blockinfile:
-              dest: "/boot/config.txt"
-              block: |
-               dtparam=i2c_arm=on
-               dtparam=i2c1=on
+        blockinfile:
+          dest: "/boot/config.txt"
+          block: |
+           dtparam=i2c_arm=on
+           dtparam=i2c1=on
 
 
 
