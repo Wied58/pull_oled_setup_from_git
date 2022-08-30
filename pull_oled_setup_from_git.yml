@@ -17,6 +17,7 @@
            - python3-dev
            - libjpeg-dev
            - libopenjp2-7-dev
+           - libtiff5
    
 
 
