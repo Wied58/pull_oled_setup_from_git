@@ -79,7 +79,7 @@
 
 
       - name: execute install script
-        script: /home/pi/Adafruit_Python_SSD1306/setup.py install > setup_output.txt
+        script: /home/pi/Adafruit_Python_SSD1306/setup.py install
 
 #      #cd Adafruit_Python_SSD1306
 #      #sudo python3 setup.py install
