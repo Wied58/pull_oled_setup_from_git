@@ -78,6 +78,6 @@
 
 
 
-#      - name: execute install script
-#        shell: /home/pi/Adafruit_Python_SSD1306/setup.py install
+      - name: execute install script
+        shell: /home/pi/Adafruit_Python_SSD1306/setup.py install
 
