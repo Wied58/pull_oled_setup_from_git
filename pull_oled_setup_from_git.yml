@@ -79,5 +79,5 @@
 
 
       - name: execute install script
-        shell: /home/pi/Adafruit_Python_SSD1306/setup.py install
+        script: /home/pi/Adafruit_Python_SSD1306/setup.py install
 
