@@ -8,7 +8,7 @@ sudo apt install git ansible -y
 
 To Use: ansible-pull -d /home/pi/pull -i 'localhost,' -U https://github.com/Wied58/pull_oled_setup_from_git pull_oled_setup_from_git.yml
 
-To test: /home/pi/Adafruit_Python_SSD1306/examples/python3 stats.py
+To test: $python3 /home/pi/Adafruit_Python_SSD1306/examples/stats.py
 
-For extra credit (send to process background): /home/pi/Adafruit_Python_SSD1306/examples/python3 stats.py & 
+For extra credit (send to process background): $python3 /home/pi/Adafruit_Python_SSD1306/examples/stats.py & 
 
