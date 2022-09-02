@@ -84,5 +84,5 @@
 
 
       - name: Print reboot message
-        debug: msg "Don't forget to reboot"
+        debug: msg="Don't forget to reboot"
 
