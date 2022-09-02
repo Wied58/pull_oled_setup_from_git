@@ -83,6 +83,6 @@
 
 
       - name: Print the gateway for each host when defined
-        debug:
+        ansible.builtin.debug:
         msg: Don't forget to reboot!
 
