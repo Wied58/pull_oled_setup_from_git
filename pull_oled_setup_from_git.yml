@@ -79,7 +79,8 @@
 
 
       - name: execute install script
-        shell: /home/pi/Adafruit_Python_SSD1306/setup.py install >  /home/pi/Adafruit_Python_SSD1306/setup.out
+        #shell: /home/pi/Adafruit_Python_SSD1306/setup.py install >  /home/pi/Adafruit_Python_SSD1306/setup.out
+        shell: /home/pi/Adafruit_Python_SSD1306/setup.py install 
 
 
       - name: Print reboot message
