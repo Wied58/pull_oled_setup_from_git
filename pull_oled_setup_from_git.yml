@@ -82,5 +82,10 @@
         shell: /home/pi/Adafruit_Python_SSD1306/setup.py install >  /home/pi/Adafruit_Python_SSD1306/setup.out
 
 
-      - name: don't forget to reboot
+      - name: Print the gateway for each host when defined
+        debug:
+        msg: Don't forget to reboot!
+
+
+
         reboot:
