@@ -25,6 +25,7 @@
 
          # actual command in the github
          # sudo -H pip3 install --upgrade  
+         # https://github.com/rm-hull/luma.oled
 
 
       - name: Set I2C Port
