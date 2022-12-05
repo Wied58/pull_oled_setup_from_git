@@ -12,13 +12,7 @@
           name: "{{ item }}"
           state: present
         loop:
-           - python3-pip
-           - python3-setuptools
-           - python3-dev
-           - libjpeg-dev
            - libopenjp2-7-dev
-           - libtiff5
-   
 
 
       - name: install python packages
@@ -27,38 +21,10 @@
           executable: pip3
         loop:
            - Pillow
+           - luma.oled
 
-      - name: Delete content & directory
-        file:
-          state: absent
-          path: /home/pi/Adafruit_Python_SSD1306
-
-      #git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
-      - name: Get recusb repo from GitHub
-        git: 
-          dest: /home/pi/Adafruit_Python_SSD1306
-          repo: "https://github.com/adafruit/Adafruit_Python_SSD1306.git"
-          update: yes
-          force: yes
-          #version: "main"
-
-      - name: Change owership and permissions
-        file:
-           path: /home/pi/Adafruit_Python_SSD1306
-           state: directory
-           owner: pi 
-           group: pi
-           # when specifying mode using octal numbers, add a leading 0
-           mode: 0755
-           recurse: yes
-
-
-      - name: add shebang to python oled setup.py script
-        lineinfile:
-          path: /home/pi/Adafruit_Python_SSD1306/setup.py
-          insertbefore: BOF
-          line: '#!/usr/bin/python3'
-
+         # actual command in the github
+         # sudo -H pip3 install --upgrade  
 
 
       - name: Set I2C Port
@@ -75,13 +41,4 @@
           block: |
            dtparam=i2c_arm=on
            dtparam=i2c1=on
-
-
-
-      - name: execute install script
-        shell: /home/pi/Adafruit_Python_SSD1306/setup.py install >  /home/pi/Adafruit_Python_SSD1306/setup.out
-
-
-      - name: Print reboot message
-        debug: msg="Don't forget to reboot"
 
