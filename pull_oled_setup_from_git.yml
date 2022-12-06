@@ -30,7 +30,7 @@
       - name: Download foo.conf
         get_url:
           url: "{{ item }}"
-          dest: /pi/home/test
+          dest: /home/pi/test
           mode: '0440'
         loop:
            - https://www.1001fonts.com/download/font/monospace.medium.ttf
