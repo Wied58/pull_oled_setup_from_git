@@ -1,7 +1,3 @@
-#wget https://www.1001fonts.com/download/font/monospace.medium.ttf
-#wget https://github.com/rm-hull/luma.examples/blob/master/examples/demo_opts.py
-
-
 --- 
 - 
   hosts: all
@@ -32,7 +28,7 @@
          # https://github.com/rm-hull/luma.oled
 
       - name: Download foo.conf
-        ansible.builtin.get_url:
+        get_url:
           url: "{{ item }}"
           dest: /pi/home/test
           mode: '0440'
