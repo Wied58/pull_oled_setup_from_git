@@ -1,3 +1,7 @@
+#wget https://www.1001fonts.com/download/font/monospace.medium.ttf
+#wget https://github.com/rm-hull/luma.examples/blob/master/examples/demo_opts.py
+
+
 --- 
 - 
   hosts: all
@@ -27,6 +31,14 @@
          # sudo -H pip3 install --upgrade  
          # https://github.com/rm-hull/luma.oled
 
+      - name: Download foo.conf
+        ansible.builtin.get_url:
+          url: "{{ item }}"
+          dest: /pi/home/test
+          mode: '0440'
+        loop:
+           - https://www.1001fonts.com/download/font/monospace.medium.ttf
+           - https://github.com/rm-hull/luma.examples/blob/master/examples/demo_opts.py
 
       - name: Set I2C Port
         blockinfile:
