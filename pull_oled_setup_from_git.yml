@@ -34,7 +34,7 @@
           mode: '0440'
         loop:
            - { name: 'https://www.1001fonts.com/download/font/monospace.medium.ttf', path: '/home/pi/oled/fonts' }
-           - { name: 'https://github.com/rm-hull/luma.examples/blob/master/examples/demo_opts.py', path: ''/home/pi/oled }'
+           - { name: 'https://github.com/rm-hull/luma.examples/blob/master/examples/demo_opts.py', path: '/home/pi/oled' }
 
 
       - name: Set I2C Port
