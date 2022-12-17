@@ -43,10 +43,11 @@
           owner: pi
           group: pi
           mode: 0777
+
       - name: Get gonet4 repo from GitHub
         git: 
           dest: /home/pi/luma_examples
-          repo: "https://github.com/rm-hull/luma.examples.git"
+          repo: "https://github.com/rm-hull/luma.examples"
           update: yes
           force: yes
           version: "main"
