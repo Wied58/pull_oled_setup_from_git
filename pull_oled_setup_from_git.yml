@@ -36,6 +36,13 @@
            - { name: 'https://www.1001fonts.com/download/font/monospace.medium.ttf', path: '/home/pi/oled/fonts' }
            #- { name: 'https://github.com/rm-hull/luma.examples/blob/master/examples/demo_opts.py', path: '/home/pi/oled' }
 
+      - name: Create luma_examples directory 
+        file:
+          state: directory
+          path: /home/pi/luma_examples
+          owner: pi
+          group: pi
+          mode: 0777
       - name: Get gonet4 repo from GitHub
         git: 
           dest: /home/pi/luma_examples
