@@ -53,13 +53,13 @@
           version: "master" 
 
 
-#      - name: Copy demo_opts.py to oled directory from where previous block dumped it
-#        copy:
-#          src: /home/pi/Tools/git_repo/
-#          dest: /home/pi/Tools/Camera/
-#          owner: pi
-#          group: pi
-#          mode: 0775
+      - name: Copy demo_opts.py to oled directory from where previous block dumped it
+        copy:
+          src: /luma_examples/examples/demo_opts.py
+          dest: /home/pi/oled/demo_opts.py
+          owner: pi
+          group: pi
+          mode: 0775
 
       - name: Set I2C Port
         blockinfile:
