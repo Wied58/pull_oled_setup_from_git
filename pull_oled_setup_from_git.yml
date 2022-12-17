@@ -38,7 +38,7 @@
 
       - name: Get gonet4 repo from GitHub
         git: 
-          dest: /home/pi/
+          dest: /home/pi/luma_examples
           repo: "https://github.com/rm-hull/luma.examples.git"
           update: yes
           force: yes
