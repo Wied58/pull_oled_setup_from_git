@@ -27,15 +27,31 @@
          # sudo -H pip3 install --upgrade  
          # https://github.com/rm-hull/luma.oled
 
-      - name: Download foo.conf
+      - name: Download fonts
         get_url:
           url: "{{ item.name }}"
           dest: "{{ item.path }}"
           mode: '0440'
         loop:
            - { name: 'https://www.1001fonts.com/download/font/monospace.medium.ttf', path: '/home/pi/oled/fonts' }
-           - { name: 'https://github.com/rm-hull/luma.examples/blob/master/examples/demo_opts.py', path: '/home/pi/oled' }
+           #- { name: 'https://github.com/rm-hull/luma.examples/blob/master/examples/demo_opts.py', path: '/home/pi/oled' }
 
+      - name: Get gonet4 repo from GitHub
+        git: 
+          dest: /home/pi/
+          repo: "https://github.com/rm-hull/luma.examples.git"
+          update: yes
+          force: yes
+          version: "main"
+
+
+#      - name: Copy demo_opts.py to oled directory from where previous block dumped it
+#        copy:
+#          src: /home/pi/Tools/git_repo/
+#          dest: /home/pi/Tools/Camera/
+#          owner: pi
+#          group: pi
+#          mode: 0775
 
       - name: Set I2C Port
         blockinfile:
