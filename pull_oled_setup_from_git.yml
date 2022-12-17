@@ -50,7 +50,7 @@
           repo: "https://github.com/rm-hull/luma.examples.git"
           update: yes
           force: yes
-          version: "master 
+          version: "master" 
 
 
 #      - name: Copy demo_opts.py to oled directory from where previous block dumped it
